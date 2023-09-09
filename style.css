@@ -1,0 +1,664 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+}
+
+
+.main {
+    background-image: url('https://images.unsplash.com/photo-1491947153227-33d59da6c448?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80https://helios-i.mashable.com/imagery/articles/07Dvi63LE8z1oBSXbRCXKVu/hero-image.fill.size_1400x538.v1693589614.pnghttps://images.unsplash.com/photo-1491947153227-33d59da6c448?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#nav {
+    width: 100%;
+    height: 10vh;
+    background-color: #ffff;
+    color: black;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+
+
+}
+
+#nav .logoSec {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#nav .logoSec img:nth-child(1) {
+    cursor: pointer;
+}
+
+#nav .centerMenu {
+    display: flex;
+    align-items: center;
+    gap: 37px;
+}
+
+#nav .centerMenu h4 {
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#nav .centerMenu h4:hover {
+    color: rgb(0, 162, 255);
+}
+
+#nav img {
+    /* width: 100%; */
+    height: 60px;
+
+}
+
+#nav .searchDiv {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#nav .searchDiv img {
+    height: 30px;
+    cursor: pointer;
+
+}
+
+#nav .searchDiv input {
+    display: none;
+    padding: 7px 10px;
+    outline: none;
+    border-radius: 5px;
+
+}
+
+
+#pageLatest {
+    width: 100%;
+    height: 100%;
+    /* position: relative; */
+
+}
+
+
+/* white nav */
+#pageLatest .whiteNav {
+    width: 100%;
+    height: 25vh;
+    background-color: white;
+    padding: 40px;
+    padding-left: 90px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 99;
+    position: absolute;
+    top: 80%;
+    border-bottom-right-radius: 200px;
+}
+
+/* #pageLatest .whiteNav::after {
+    content: "";
+    width: 100%;
+    height: 25vh;
+    background-color: brown;
+    z-index: 99;
+} */
+
+#pageLatest .whiteNav p {
+    text-transform: uppercase;
+    color:
+        RGB(76, 78, 221);
+    cursor: pointer;
+}
+
+#pageLatest .whiteNav h4 {
+    color:
+        RGB(76, 78, 221);
+    margin: 16px 0px 0px;
+    padding: 0px;
+    cursor: pointer;
+}
+
+#pageLatest .whiteNav:hover {
+    color: blue;
+    cursor: pointer;
+}
+
+
+/* darkblue div */
+#pageLatest .darkBlueDiv {
+    display: flex;
+    justify-content: space-between;
+    background-color: RGB(10, 24, 41);
+    width: 100%;
+    height: 50vh;
+    position: absolute;
+    padding: 80px;
+    color: white;
+    top: 100%;
+    bottom: 0%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#pageLatest .darkBlueDiv .standCard {
+    max-width: 26%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#pageLatest .darkBlueDiv .standCard:hover p {
+    color: rgb(255, 208, 0);
+}
+
+#pageLatest .darkBlueDiv .standCard:hover h2 {
+    color: rgb(255, 208, 0);
+    cursor: pointer;
+}
+
+#pageLatest .darkBlueDiv .standCard p {
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+/*  small nav */
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+    border: 1px solid grey;
+}
+
+.sidenav .logoSec img {
+    height: 30%;
+    width: 30%;
+}
+
+.sidenav .logoSec {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+/* The navigation menu links */
+.sidenav h4 {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #727272;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav h4:hover {
+    color: #cfcfcf;
+    cursor: pointer;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+
+
+
+
+/* latest blogs section */
+
+.latestBlogs {
+    width: 100%;
+    height: 100vh;
+    margin-top: 191px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 2%;
+
+}
+
+.latestBlogs .tech {
+    width: 33.3%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    top: 34%;
+}
+
+.latestBlogs .tech img {
+    width: 100%;
+    height: auto;
+}
+
+.latestBlogs .tech h3 {
+    cursor: pointer;
+}
+.latestBlogs .tech .line {
+    content: "";
+    width: 16%;
+    height: 0.4vh;
+    background-color: blue;
+
+}
+
+.latestBlogs .tech > h3:hover {
+    color: blue;
+}
+.latestBlogs .tech > p:last-child {
+    color: blue;
+    font-size: 18px;
+}
+
+.latestBlogs .tech:last-child{
+    background-color: rgb(221, 221, 221);
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.5;
+    padding: 29px;
+}
+.latestBlogs .tech:last-child .trendingLine{
+    width: 16%;
+    height: 0.4vh;
+    background-color: rgb(255, 0, 0);
+
+}
+
+footer{
+    width: 100%;
+    height: 50vh;
+    background-color:
+    RGB(10, 24, 41);
+    position: relative;
+    top: 59%;
+    padding: 20px;
+}
+.footer{
+    position: absolute;
+    padding: 10px;
+}
+
+.footer .footmenu{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 30px;
+
+}
+
+.footer h4{
+    font-size: 27px;
+    transition: .4s;
+    cursor: pointer;
+    color: white;
+
+}
+
+.footer h4:hover{
+    color: rgba(255, 255, 255, 0.774);
+    transition: .4s;
+}
+
+.footer img{
+    display: block;
+}
+
+
+
+.menuAbout{
+    display: flex;
+    margin-top: 40px;
+    gap: 29px;
+    justify-content: center;
+    
+}
+
+.menuAbout h5{
+    color: white;
+    font-size: 14px;
+    transition: .4s;
+    cursor: pointer;
+
+    
+}
+
+
+.menuAbout h5:hover{
+    color: rgba(255, 255, 255, 0.774);
+    transition: .4s;
+}
+
+
+.author{
+    text-align: center;
+    margin-top: 30px;
+    color: cyan;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav h4 {
+        font-size: 18px;
+    }
+}
+
+
+
+/* laptops screen */
+@media only screen and (max-width: 1024px) {
+    #nav .centerMenu {
+        display: none;
+    }
+
+    #pageLatest .darkBlueDiv {
+        flex-direction: column;
+
+    }
+
+    #pageLatest .darkBlueDiv .standCard {
+        width: 100%;
+
+    }
+
+
+    #pageLatest .darkBlueDiv .standCard {
+        max-width: unset;
+
+    }
+
+    #pageLatest .whiteNav {
+        height: 21%;
+        width: 100%;
+        padding: 10px;
+        padding-left: 0px;
+        font-size: 1.6vmax;
+        border-bottom-right-radius: 0px;
+        justify-content: center;
+        padding: 28px;
+    }
+
+    #pageLatest .darkBlueDiv {
+        padding: 28px;
+        height: 100%;
+        width: 100%;
+        font-size: 2.4vmax;
+        gap: 13px;
+    }
+
+    #nav img:nth-child(2) {
+        display: none;
+    }
+
+    #nav {
+        padding: 10px 10px;
+
+    }
+
+    #nav .searchDiv input {
+        display: block;
+        padding: 6px 10px;
+    }
+
+    #nav .searchDiv {
+        gap: 15px;
+    }
+
+    #nav .searchDiv img {
+        display: block;
+        height: 25px;
+    }
+
+    .latestBlogs{
+        /* flex-direction: column; */
+        position: relative;
+        top: 85%;
+    }
+
+    .latestBlogs .tech {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    footer{
+        width: 100%;
+        height: 100%;
+        background-color:
+        RGB(10, 24, 41);
+        position: relative;
+        top: 150%;
+        bottom: 0%;
+        padding: 20px;
+    }
+
+    .footer{
+        position: absolute;
+        padding: 0px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .footer .footmenu{
+        flex-wrap: wrap;
+        margin-top: 10px;
+        align-items: flex-start;
+    
+    }
+    
+    .footer h4{
+        font-size: 27px;
+        transition: .4s;
+        cursor: pointer;
+        color: white;
+    
+    }
+    
+    .footer h4:hover{
+        color: rgba(255, 255, 255, 0.774);
+        transition: .4s;
+    }
+    
+    .footer img{
+        display: block;
+    }
+
+
+
+
+}
+
+
+
+
+
+/* small screen */
+@media only screen and (max-width: 768px) {
+    #pageLatest .darkBlueDiv .standCard {
+        max-width: unset;
+
+    }
+
+    #pageLatest .whiteNav {
+        height: 21%;
+        width: 100%;
+        padding: 10px;
+        padding-left: 0px;
+        font-size: 1.6vmax;
+        border-bottom-right-radius: 0px;
+        justify-content: center;
+        padding: 28px;
+    }
+
+    #pageLatest .darkBlueDiv {
+        padding: 28px;
+        height: 100%;
+        width: 100%;
+        font-size: 2.4vmax;
+        gap: 13px;
+    }
+
+    #nav img:nth-child(2) {
+        display: none;
+    }
+
+    #nav {
+        padding: 10px 10px;
+
+    }
+
+    #nav .searchDiv input {
+        display: block;
+        padding: 6px 10px;
+    }
+
+    #nav .searchDiv {
+        gap: 15px;
+    }
+
+    #nav .searchDiv img {
+        display: block;
+        height: 25px;
+    }
+    .latestBlogs{
+        flex-direction: column;
+        position: relative;
+        top: 0;
+    }
+    .latestBlogs .tech {
+        width: 100%;
+        padding: 20px;
+        position: relative;
+        top: 80%;
+    }
+    .latestBlogs .tech .line {
+        content: "";
+        width: 16%;
+        height: 0.3vh;
+        background-color: blue;
+    }
+
+    .latestBlogs .tech:last-child{
+        width: 100%;
+        padding: 20px;
+        position: relative;
+        top: 80%;
+        background-color: rgb(221, 221, 221);
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    footer{
+        width: 100%;
+        height: 100%;
+        background-color:
+        RGB(10, 24, 41);
+        position: relative;
+        top: 370%;
+        /* bottom: 0%;/ */
+        padding: 20px;
+    }
+
+    .footer{
+        padding: 0px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        height: 100vh;
+    }
+    
+    .footer .footmenu{
+        flex-direction: column;
+        margin-top: 10px;
+        align-items: flex-start;
+        gap: 20px;
+    
+    }
+    
+    .footer h4{
+        font-size: 27px;
+        transition: .4s;
+        cursor: pointer;
+        color: white;
+    
+    }
+    
+    .footer h4:hover{
+        color: rgba(255, 255, 255, 0.774);
+        transition: .4s;
+    }
+    
+    .footer img{
+        display: block;
+    }
+
+    
+    
+}
